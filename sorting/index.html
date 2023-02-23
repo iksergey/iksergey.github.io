@@ -4,6 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Сортировка</title>
+
+  <script>
+    var numbers = [3, 7, 1, 5, 4, 9];
+    // alert(arr);
+    document.write(numbers);
+    var size = numbers.length;
+
+
+    for (var current = 0; current < size; current++) {
+
+      var position = current;
+
+      for (var i = current; i < size; i++) {
+        if (numbers[i] > numbers[position]) {
+          position = i;
+        }
+      }
+      var temp = numbers[current];
+      numbers[current] = numbers[position];
+      numbers[position] = temp;
+
+      document.write("<br>" + numbers);
+
+    }
+  </script>
+
 </head>
 
 <body>
