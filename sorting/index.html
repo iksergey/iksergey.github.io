@@ -6,17 +6,29 @@
   <title>Сортировка</title>
 
   <script>
-    var numbers = [3, 7, 1, 5, 4, 9];
+    function getRandom(n) {
+      return Math.round(Math.random() * n);
+    }
+
+    function getArray(count) {
+      var tempArray = [];
+      for (let i = 0; i < count; i++) {
+        tempArray.push(getRandom(10))
+      }
+      return tempArray;
+    }
+
+
+    var numbers = getArray(10);
     // alert(arr);
-    document.write(numbers);
+    document.write(numbers + "  <<< исходные данные<br>");
     var size = numbers.length;
 
-
-    for (var current = 0; current < size; current++) {
+    for (var current = 0; current < size - 1; current++) {
 
       var position = current;
 
-      for (var i = current; i < size; i++) {
+      for (var i = current + 1; i < size; i++) {
         if (numbers[i] > numbers[position]) {
           position = i;
         }
@@ -25,7 +37,7 @@
       numbers[current] = numbers[position];
       numbers[position] = temp;
 
-      document.write("<br>" + numbers);
+      document.write(numbers + ` <<<  ${current + 1} повтор<br>`);
 
     }
   </script>
