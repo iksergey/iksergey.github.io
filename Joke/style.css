@@ -1,6 +1,5 @@
 body {
-  background: linear-gradient(to top, #55EFCB 0%, #26baff 100%);
-  height: 2000px;
+  background: linear-gradient(#26baff, #55EFCB) fixed;
 }
 
 h1,
@@ -19,12 +18,12 @@ h3 {
   color: white;
   border: 3px solid rgba(255, 255, 255, .4);
   background: none;
-  font-weight: 300;
+  font-weight: 1000;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  width: 200px;
+  width: 300px;
 }
 
 .border-button:before,
