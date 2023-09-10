@@ -1,4 +1,4 @@
-<body style="background:red">
+<body style="background: black">
 
 - Раз
 - Два
