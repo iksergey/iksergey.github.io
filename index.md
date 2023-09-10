@@ -5,6 +5,9 @@
 - Три
 - Четыре
 
+
+</body>
+
   
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
@@ -12,7 +15,6 @@
 | Row 2    | Cell 5   | Cell 6   |
 | Row 3    | Cell 8   | Cell 9   |
 
-</body>
 
 [![Typing](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=👋+Hi+there!+I'm+Sergei!+%20🙏)](http://ksergey.ru)
 
