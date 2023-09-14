@@ -2,70 +2,271 @@
 
 </body>
 
+Начать можно с [https://stackedit.io/app](https://stackedit.io/app#)
 
-- Раз
-- Два
-- Три
-- Четыре
+≡ Краткое руководство Markdown
 
-1. Раз
-2. Два
-3. Три
-4. Четыре
+# Заголовок h1
+## Заголовок h2
+### Заголовок h3
+#### Заголовок h4
+##### Заголовок h5
+###### Заголовок h6
 
-# Заголовок 1
-## Заголовок 2
-### Заголовок 3
-#### Заголовок 4
-##### Заголовок 5
+Абзац Markdown. Пример:
+
+Lorem ipsum dolor sit amet... Абзацы создаются при помощи пустой строки.
+
+Для переноса строки делаем два пробела ` ` ` ` в конце (предыдущей) строки
+Перенос строки
+
+Получается? Отлично! :+1:
+
+Текст с жирным начертанием (**strong**) и курсив (*italic*) в Markdown:
+
+_1 символ_ `_` или `*` для наклонного текста
+__2 символа__  `__` или `**` для жирного текста
+***3 символа*** `___` или `***` для наклонного и жирного одновременно.
+
+Перечеркнутый текст. 2 тильды `~` до и после текста - текст как перечеркнутый - ~~Зачеркнуто~~
+
+Горизонтальная черта. `hr` - 3 звездочки или 3 дефиса
+
+***
+
+♦ Маркированный список. Для разметки неупорядоченных списков `*`, `-`, `+`:
+
+* текст
+* текст
+* текст
+
+Вложенные пункты. 4 пробела перед маркером:
+
+* элемент маркированного списка
+* элемент маркированного списка
+    * вложенный текст
+    * вложенный текст
+
+Нумерованный список. Главное, чтобы перед элементом списка стояла цифра с точкой.
+
+1. элемент нумерованного списка
+2. элемент нумерованного списка
+    1. вложенный
+    2. вложенный
+
+Можно сделать так:
+
+0. текст
+0. текст
+0. текст
+
+Список с абзацами:
+
+* Текст
+* Текст
+* Текст
+
+    Текст (4 пробела или `Tab`).
+
+---
+
+##### ♦ Ссылки Markdown
+
+Здесь - [ссылка с title](http://example.com/ "Привет!").
+
+Здесь - [ссылка без title](http://example.com/).
+
+Ссылки с разметкой как у сносок.
+
+Здесь - [ссылка][1] продолжение текста [ссылка][2] продолжение текста [ссылка][id]. [Просто ссылка][] без указания id.
+
+[1]: http://example.com/ "Пример Title"
+[2]: http://example.com/page
+[id]: http://example.com/links (Пример Title)
+[Просто ссылка]: http://example.com/short
+
+Ссылки-сноски можно располагать в любом месте документа.
+
+---
+
+##### Цитаты в Markdown - cимвол `>`.
+
+> Lorem ipsum dolor sit amet.
+> Lorem ipsum dolor sit amet.
+>
+> Lorem ipsum dolor sit amet.
+
+В цитаты можно помещать всё что угодно, в том числе вложенные цитаты:
+
+> ### Заголовок.
+>
+> 1. список
+> 2. список
+>
+> > Вложенная цитата.
+>
+> Исходный код (4 пробела в начале строки):
+>
+>     $source = file_get_contents('example.php');
+
+##### Исходный код в Markdown
+
+В GFM - поставить 3 апострофа (где `Ё`) до и после кода. Можно указать язык исходного кода.
+
+```html
+<div class="as-header">
+    <h1>Матрёшка</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+```
+
+```javascript
+    $(function() { ... });
+```
+
+Для вставки кода внутри предложений - надо обрамить в апострофы (где `Ё`).
+
+Пример: `<div class="as-markdown">`.
+
+Если внутри кода есть апостроф, то код надо обрамить двойными апострофами: ``Бла-бла (`) тут.``
+
+##### Картинки в Markdown
+
+Картинка без alt текста
+
+![](//placehold.it/200x100)
+
+Картинка с alt и title:
+
+![Alt text](//placehold.it/200x100 "Здесь title")
+
+Картинка-ссылка:
+Подсказка: синтаксис как у ссылок, только перед открывающей квадратной скобкой ставится восклицательный знак.
+
+[![Alt text](//placehold.it/200x100)](http://example.com/)
+
+Картинки-сноски:
+
+![Картинка][image1]
+![Картинка][image2]
+![Картинка][image3]
+
+[image1]: //placehold.it/200x100
+[image2]: //placehold.it/150x100
+[image3]: //placehold.it/100x100
+
+---
+
+##### Использование HTML внутри Markdown
+
+Mожно смешивать Markdown и HTML. Если на какие-то элементы нужно поставить классы или атрибуты, используем HTML:
+
+> Выделим слова без помощи * и _ . Например, это <em class="as-italic">курсив</em> и это тоже <i>курсив</i>. А вот так уже <b>strong</b>, и так тоже <strong>strong</strong>.
+
+Можно и наоборот, внутри HTML-тегов использовать Markdown.
+
+<div class="as-markdown">
+
+###### Markdown внутри HTML. Пример:
+
+Выделять слова можно при помощи `*` и `_` . Например, это _курсив_ и это тоже *italic*. А вот так уже __strong__, и так тоже **strong**.
+
+</div>
+
+---
+
+##### Таблицы
+
+В чистом Маркдауне нет синтаксиса для таблиц, а в GFM есть. Рисуем:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+Можно по бокам линии нарисовать:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+Можно управлять выравниванием столбцов при помощи двоеточия:
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+|:------------- |:---------------:| -------------:|
+| col 3 is      | какой-то текст  |   **my text** |
+| col 2 is      | центр           |           $123|
+| Content Cell  | бука            |         ~~$7~~|
+
+Внутри таблиц можно использовать ссылки, наклонный, жирный или зачеркнутый текст.
+
+---
+
+## SmartyPants
+
+SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
+
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Row 1    | Cell 2   | Cell 3   |
-| Row 2    | Cell 5   | Cell 6   |
-| Row 3    | Cell 8   | Cell 9   |
+
+## KaTeX
+
+You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
+
+The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+
+> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
 
 
-[![Typing](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=👋+Hi+there!+I'm+Sergei!+%20🙏)](http://ksergey.ru)
+
+## UML diagrams
+
+You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+
+```mermaid
+sequenceDiagram
+Alice ->> Bob: Hello Bob, how are you?
+Bob-->>John: How about you John?
+Bob--x Alice: I am good thanks!
+Bob-x John: I am good thanks!
+Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+Bob-->Alice: Checking with John...
+Alice->John: Yes... John, how are you?
+```
+
+And this will produce a flow chart:
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
 
 
 
+---
+♦ Для всего остального есть обычный HTML.
 
+---
 
-## 🛠
+###### Links:
 
-![csharp](https://img.shields.io/badge/c%23%20-%23239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white)
-![swift](https://img.shields.io/badge/swift-%23FA7343.svg?&style=for-the-badge&logo=swift&logoColor=white)
-![python](https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)
-![postgres](https://img.shields.io/badge/postgres-%23316192.svg?&style=for-the-badge&logo=postgresql&logoColor=white) 
-![markdown](https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white)
-![sqlite](https://img.shields.io/badge/sqlite-%2307405e.svg?&style=for-the-badge&logo=sqlite&logoColor=white)
-![latex](https://img.shields.io/badge/latex-000000.svg?&style=for-the-badge&logo=actigraph&logoColor=white)
-![java](https://img.shields.io/badge/java-%23ED8B00.svg?&style=for-the-badge&logo=java&logoColor=white)
-![unity](https://img.shields.io/badge/unity%20-%23000000.svg?&style=for-the-badge&logo=unity&logoColor=white)
-![mysql](https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white)
-![bitbucket](https://img.shields.io/badge/bitbucket%20-%230047B3.svg?&style=for-the-badge&logo=bitbucket&logoColor=white)
-![k8s](https://img.shields.io/badge/kubernetes%20-%23326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white)
-![html](https://img.shields.io/badge/html%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
-![javascript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-![css](https://img.shields.io/badge/css%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) 
-![docker](https://img.shields.io/badge/docker-%232496ED.svg?&style=for-the-badge&logo=docker&logoColor=white)
-![git](https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white) 
-![github](https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white) 
-![pycharm](https://img.shields.io/badge/pycharm-%23000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white)
-![jupyter](https://img.shields.io/badge/Jupyter%20-%23F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white) 
-![conda](https://img.shields.io/badge/conda%20-%2342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white)
-![openstreetmap](https://img.shields.io/badge/OSM-%237EBC6F.svg?&style=for-the-badge&logo=openstreetmap&logoColor=white)
-![raspberry pi](https://img.shields.io/badge/RASPBERRY%20PI-%23C51A4A.svg?&style=for-the-badge&logo=raspberry%20pi&logoColor=white) 
+ * <small>[markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing</small>
+ * <small>[CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor</small>
+ * <small>[Live (Github-flavored)](https://github.com/jbt/markdown-editor) Markdown Editor</small>
+ * <small>[highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks</small>
+ * <small>[js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs</small>
 
-![](https://gist.github.com/bgoonz/435f42a8617fbb854418d84a097073c8)
-![](https://shields.io)
-
-
-## 🤝 Connect with me
-
-[![i@ksergey.ru](https://img.shields.io/badge/i@ksergey.ru%20-%23E62B1E.svg?&style=for-the-badge&logo=mail.ru&logoColor=white)](mailto:i@ksergey.ru)
-[![iksergeyru](https://img.shields.io/badge/@iksergeyru-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/iksergeyru)
-[![ksergeyru](https://img.shields.io/badge/@ksergeyru-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ksergeyru)
-[![youtube](https://img.shields.io/badge/@iksergeyru%20-%23FF0000.svg?&style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@iksergeyru/videos)
