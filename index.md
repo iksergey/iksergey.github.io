@@ -1,4 +1,4 @@
-<body style="background: #00d7d7">
+<body style="background: #ed9c5a">
 
 </body>
 
