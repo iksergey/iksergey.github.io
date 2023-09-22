@@ -1,207 +1,96 @@
-<body style="background: #d7d7d7">
+# Welcome to StackEdit!
 
-</body>
+Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
-Начать можно с [https://stackedit.io/app](https://stackedit.io/app#)
 
-≡ Краткое руководство Markdown
+# Files
 
-# Заголовок h1
-## Заголовок h2
-### Заголовок h3
-#### Заголовок h4
-##### Заголовок h5
-###### Заголовок h6
+StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 
-Абзац Markdown. Пример:
+## Create files and folders
 
-Lorem ipsum dolor sit amet... Абзацы создаются при помощи пустой строки.
+The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
 
-Для переноса строки делаем два пробела ` ` ` ` в конце (предыдущей) строки
-Перенос строки
+## Switch to another file
 
-Получается? Отлично! :+1:
+All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
 
-Текст с жирным начертанием (**strong**) и курсив (*italic*) в Markdown:
+## Rename a file
 
-_1 символ_ `_` или `*` для наклонного текста
-__2 символа__  `__` или `**` для жирного текста
-***3 символа*** `___` или `***` для наклонного и жирного одновременно.
+You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
 
-Перечеркнутый текст. 2 тильды `~` до и после текста - текст как перечеркнутый - ~~Зачеркнуто~~
+## Delete a file
 
-Горизонтальная черта. `hr` - 3 звездочки или 3 дефиса
+You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
 
-***
+## Export a file
 
-♦ Маркированный список. Для разметки неупорядоченных списков `*`, `-`, `+`:
+You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
 
-* текст
-* текст
-* текст
 
-Вложенные пункты. 4 пробела перед маркером:
+# Synchronization
 
-* элемент маркированного списка
-* элемент маркированного списка
-    * вложенный текст
-    * вложенный текст
+Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
 
-Нумерованный список. Главное, чтобы перед элементом списка стояла цифра с точкой.
+There are two types of synchronization and they can complement each other:
 
-1. элемент нумерованного списка
-2. элемент нумерованного списка
-    1. вложенный
-    2. вложенный
+- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
+	> To start syncing your workspace, just sign in with Google in the menu.
 
-Можно сделать так:
+- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
+	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
 
-0. текст
-0. текст
-0. текст
+## Open a file
 
-Список с абзацами:
+You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
 
-* Текст
-* Текст
-* Текст
+## Save a file
 
-    Текст (4 пробела или `Tab`).
+You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
 
----
+## Synchronize a file
 
-##### ♦ Ссылки Markdown
+Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
 
-Здесь - [ссылка с title](http://example.com/ "Привет!").
+If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
 
-Здесь - [ссылка без title](http://example.com/).
+> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
 
-Ссылки с разметкой как у сносок.
+## Manage file synchronization
 
-Здесь - [ссылка][1] продолжение текста [ссылка][2] продолжение текста [ссылка][id]. [Просто ссылка][] без указания id.
+Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
 
-[1]: http://example.com/ "Пример Title"
-[2]: http://example.com/page
-[id]: http://example.com/links (Пример Title)
-[Просто ссылка]: http://example.com/short
 
-Ссылки-сноски можно располагать в любом месте документа.
+# Publication
 
----
+Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
 
-##### Цитаты в Markdown - cимвол `>`.
+> Before starting to publish, you must link an account in the **Publish** sub-menu.
 
-> Lorem ipsum dolor sit amet.
-> Lorem ipsum dolor sit amet.
->
-> Lorem ipsum dolor sit amet.
+## Publish a File
 
-В цитаты можно помещать всё что угодно, в том числе вложенные цитаты:
+You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
 
-> ### Заголовок.
->
-> 1. список
-> 2. список
->
-> > Вложенная цитата.
->
-> Исходный код (4 пробела в начале строки):
->
->     $source = file_get_contents('example.php');
+- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
+- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
 
-##### Исходный код в Markdown
+## Update a publication
 
-В GFM - поставить 3 апострофа (где `Ё`) до и после кода. Можно указать язык исходного кода.
+After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
 
-```html
-<div class="as-header">
-    <h1>Матрёшка</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-</div>
-```
+> **Note:** The **Publish now** button is disabled if your file has not been published yet.
 
-```javascript
-    $(function() { ... });
-```
+## Manage file publication
 
-Для вставки кода внутри предложений - надо обрамить в апострофы (где `Ё`).
+Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
 
-Пример: `<div class="as-markdown">`.
 
-Если внутри кода есть апостроф, то код надо обрамить двойными апострофами: ``Бла-бла (`) тут.``
+# Markdown extensions
 
-##### Картинки в Markdown
+StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
 
-Картинка без alt текста
+> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
 
-![](//placehold.it/200x100)
-
-Картинка с alt и title:
-
-![Alt text](//placehold.it/200x100 "Здесь title")
-
-Картинка-ссылка:
-Подсказка: синтаксис как у ссылок, только перед открывающей квадратной скобкой ставится восклицательный знак.
-
-[![Alt text](//placehold.it/200x100)](http://example.com/)
-
-Картинки-сноски:
-
-![Картинка][image1]
-![Картинка][image2]
-![Картинка][image3]
-
-[image1]: //placehold.it/200x100
-[image2]: //placehold.it/150x100
-[image3]: //placehold.it/100x100
-
----
-
-##### Использование HTML внутри Markdown
-
-Mожно смешивать Markdown и HTML. Если на какие-то элементы нужно поставить классы или атрибуты, используем HTML:
-
-> Выделим слова без помощи * и _ . Например, это <em class="as-italic">курсив</em> и это тоже <i>курсив</i>. А вот так уже <b>strong</b>, и так тоже <strong>strong</strong>.
-
-Можно и наоборот, внутри HTML-тегов использовать Markdown.
-
-<div class="as-markdown">
-
-###### Markdown внутри HTML. Пример:
-
-Выделять слова можно при помощи `*` и `_` . Например, это _курсив_ и это тоже *italic*. А вот так уже __strong__, и так тоже **strong**.
-
-</div>
-
----
-
-##### Таблицы
-
-В чистом Маркдауне нет синтаксиса для таблиц, а в GFM есть. Рисуем:
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-
-Можно по бокам линии нарисовать:
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-Можно управлять выравниванием столбцов при помощи двоеточия:
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-|:------------- |:---------------:| -------------:|
-| col 3 is      | какой-то текст  |   **my text** |
-| col 2 is      | центр           |           $123|
-| Content Cell  | бука            |         ~~$7~~|
-
-Внутри таблиц можно использовать ссылки, наклонный, жирный или зачеркнутый текст.
-
----
 
 ## SmartyPants
 
@@ -212,7 +101,6 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 |Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
 |Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
 |Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
 
 
 ## KaTeX
@@ -226,7 +114,6 @@ $$
 $$
 
 > You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
 
 
 ## UML diagrams
@@ -254,19 +141,3 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
-
-
-
----
-♦ Для всего остального есть обычный HTML.
-
----
-
-###### Links:
-
- * <small>[markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing</small>
- * <small>[CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor</small>
- * <small>[Live (Github-flavored)](https://github.com/jbt/markdown-editor) Markdown Editor</small>
- * <small>[highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks</small>
- * <small>[js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs</small>
-
