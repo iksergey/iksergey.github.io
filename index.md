@@ -141,3 +141,16 @@ A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
 ```
+
+# Квадратное уравнение
+$$Ax^2+Bx+C=0$$
+
+$$a \in N$$
+
+$$\text{csc\ \ \  csdcsdc cdsc}$$
+
+```python
+print('hello world');
+for item in li:
+  print(item);
+```
